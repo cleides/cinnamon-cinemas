@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
+
+class Cinema {
+'2D grid (array) of booleans
+-seats:bool[][]
+
++Cinema()
++checkAndAllocateSeats(desiredSeatsCount:Integer): String
+-checkSeatsAvailable(desiredSeatsCount:Integer): boolean
+-allocateSeats(desiredSeatsCount:Integer): String
+}
+
+@enduml
