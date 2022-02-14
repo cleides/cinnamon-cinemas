@@ -8,6 +8,12 @@ class CinemaTest {
 
     @Test
     void testCheckAndAllocateSeats() {
+        //Arrange
+        Cinema sut = new Cinema();
+        //Act
+        String seatReference = sut.checkAndAllocateSeats(3);
+        //Assert
+        assertEquals("A1 A2 A3", seatReference);
     }
 
     @Test
