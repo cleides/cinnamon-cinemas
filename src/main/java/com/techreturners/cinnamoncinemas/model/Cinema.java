@@ -7,10 +7,25 @@ public class Cinema {
     public String checkAndAllocateSeats(int desiredSeatsCount) {
         return "";
     }
+
     // Seats must be available before allocation
     public boolean checkSeatsAvailable(int desiredSeatsCount) {
-        return false;
+        int availableSeatsCount = 0;
+        for (int rowIndex = 0; rowIndex < seats.length; rowIndex++) {
+            //System.out.println(rowIndex);
+            for (int columnIndex = 0; columnIndex < seats[rowIndex].length; columnIndex++) {
+                boolean isSold = seats[rowIndex][columnIndex]; //reading the status of the seat
+                if (!isSold) {
+                    availableSeatsCount++;
+                }
+            }
+        }
+        if (availableSeatsCount >= desiredSeatsCount)
+            return true;
+        else
+            return false;
     }
+
     //encapsulated because this method can only be run safely if
     // seatsAvailable has passed
     private String allocateSeats(int desiredSeatsCount) {
