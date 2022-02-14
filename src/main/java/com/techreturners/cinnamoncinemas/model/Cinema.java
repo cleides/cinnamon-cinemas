@@ -12,7 +12,6 @@ public class Cinema {
     public boolean checkSeatsAvailable(int desiredSeatsCount) {
         int availableSeatsCount = 0;
         for (int rowIndex = 0; rowIndex < seats.length; rowIndex++) {
-            //System.out.println(rowIndex);
             for (int columnIndex = 0; columnIndex < seats[rowIndex].length; columnIndex++) {
                 boolean isSold = seats[rowIndex][columnIndex]; //reading the status of the seat
                 if (!isSold) {
@@ -31,5 +30,4 @@ public class Cinema {
     private String allocateSeats(int desiredSeatsCount) {
         return "";
     }
-
 }

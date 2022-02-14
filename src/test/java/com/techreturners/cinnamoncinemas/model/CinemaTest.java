@@ -12,13 +12,13 @@ class CinemaTest {
 
     @Test
     void testCheckSeatsAvailable() {
-        //Arrange
-        Cinema sut = new Cinema();
-        //Act
-        boolean areSeatsAvailable = sut.checkSeatsAvailable(3);
-        //Assert
+        boolean areSeatsAvailable = new Cinema().checkSeatsAvailable(3);
         assertTrue(areSeatsAvailable);
     }
-
+    @Test
+    void testCheckSeatsNotAvailable() {
+        boolean areSeatsAvailable = new Cinema().checkSeatsAvailable(16);
+        assertFalse(areSeatsAvailable);
+    }
 
 }
