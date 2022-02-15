@@ -17,6 +17,18 @@ class CinemaTest {
     }
 
     @Test
+    void testCheckAndAllocateSeats2() {
+        //Arrange
+        Cinema sut = new Cinema();
+        //Act
+        sut.checkAndAllocateSeats(3);
+        sut.checkAndAllocateSeats(1);
+        String seatReferences= sut.checkAndAllocateSeats(2);
+        //Assert
+        assertEquals("A5B1", seatReferences);
+    }
+
+    @Test
     void testCheckSeatsAvailable() {
         boolean areSeatsAvailable = new Cinema().checkSeatsAvailable(3);
         assertTrue(areSeatsAvailable);
