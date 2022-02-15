@@ -8,7 +8,7 @@ class Cinema {
 
 +Cinema()
 +checkAndAllocateSeats(desiredSeatsCount:Integer): String
--checkSeatsAvailable(desiredSeatsCount:Integer): boolean
++checkSeatsAvailable(desiredSeatsCount:Integer): boolean
 -allocateSeats(desiredSeatsCount:Integer): String
 }
 
